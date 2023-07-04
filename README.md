@@ -18,3 +18,16 @@ for f in ../lib/*.so ; do echo basename $f; ln -s  /project/def-kbubbar/Chrono_t
 Also create a link libIrrlicht.so.1.8 pointing to libIrrlicht.so.1.8.5
 ~~~
 
+### Building projects
+
+The vaiable Chrono_DIR must be set before running cmake/make
+
+Example:
+
+~~~
+export Chrono_DIR=/project/def-kbubbar/Chrono_test_2023_06_28/chrono_build
+cd /home/pcrowe/scratch/template_project/build
+cmake .. 
+make
+~~~
+
