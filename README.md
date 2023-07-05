@@ -7,6 +7,8 @@ module load optix/7.5.0
 
 #### Making libraries accessible to group members.
 
+The solition below did not work for building projects by group users. CMake required the home directory of the user who performed the Chrono installation to be executable by them.
+
 The linker locates libraries in chrono_build/lib through the installer's home directory, which is not accessible to other group users.
 
 Solution:
@@ -17,6 +19,8 @@ for f in ../lib/*.so ; do echo basename $f; ln -s  /project/def-kbubbar/Chrono_t
 
 Also create a link libIrrlicht.so.1.8 pointing to libIrrlicht.so.1.8.5
 ~~~
+
+
 
 ### Building projects
 
